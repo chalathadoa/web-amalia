@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace App\Controllers\Santri;
 
 use App\Controllers\BaseController;
 
@@ -12,6 +12,6 @@ class Home extends BaseController
             'menu' => 'dashboard',
             'submenu' => ''
         ];
-        return view('admin/viewhome.php', $data);
+        return view('/santri/viewhome.php', $data);
     }
 }

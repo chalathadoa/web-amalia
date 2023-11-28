@@ -44,21 +44,11 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header row">
-                        <div class="col-8">
+                        <div class="col-10">
                             <h4>All Events</h4>
                         </div>
-                        <div class="col-3">
-                            <form>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary"><i class="fas fa-search"></i></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-1">
-                            <a href="<?= site_url('manage_events/trash') ?>" class="btn btn-icon btn-danger"><i class="fa fa-trash"></i></a>
+                        <div class="col-2">
+                            <a href="<?= site_url('manage_events/trash') ?>" class="btn btn-icon btn-danger"><i class="fa fa-trash"></i> Recycle Bin</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -67,12 +57,7 @@
                             <table class="table table-striped">
                                 <tbody>
                                     <tr>
-                                        <th class="text-center pt-2">
-                                            <div class="custom-checkbox custom-checkbox-table custom-control">
-                                                <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad" class="custom-control-input" id="checkbox-all">
-                                                <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
-                                            </div>
-                                        </th>
+                                        <th>#</th>
                                         <th>ID Event</th>
                                         <th>Title</th>
                                         <th>Create By</th>
@@ -81,14 +66,10 @@
                                         <th>Lokasi</th>
                                         <th>Status</th>
                                     </tr>
+                                    <?php $i = 1; ?>
                                     <?php foreach ($events as $event) : ?>
                                         <tr>
-                                            <td>
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
-                                                    <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
-                                                </div>
-                                            </td>
+                                            <th scope="row"><?= $i++; ?></th>
                                             <td><?= $event['id_event']; ?></td>
                                             <td><?= $event['nama_event']; ?>
                                                 <div class="table-links">
@@ -117,36 +98,6 @@
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
-                                    <tr>
-                                        <td>
-                                            <div class="custom-checkbox custom-control">
-                                                <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
-                                                <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
-                                            </div>
-                                        </td>
-                                        <td>0001</td>
-                                        <td>Amalia Berbagi
-                                            <div class="table-links">
-                                                <a href="#">View</a>
-                                                <div class="bullet"></div>
-                                                <a href="#">Edit</a>
-                                                <div class="bullet"></div>
-                                                <a href="#" class="text-danger">Trash</a>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <a href="#">
-                                                <img alt="image" src="/assets/img/avatar/avatar-5.png" class="rounded-circle" width="35" data-toggle="title" title="">
-                                                <div class="d-inline-block ml-1">Rizal Fakhri</div>
-                                            </a>
-                                        </td>
-                                        <td>20-09-2023</td>
-                                        <td>28-09-2023</td>
-                                        <td>Asrama</td>
-                                        <td>
-                                            <div class="badge badge-warning">Upcoming</div>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>

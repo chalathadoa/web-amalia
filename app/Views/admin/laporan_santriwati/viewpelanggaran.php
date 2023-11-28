@@ -1,3 +1,8 @@
+<?
+
+/**
+ * @var CodeIgniter\View\View $this
+ */ ?>
 <?= $this->extend('layout/default') ?>
 
 <?= $this->section('content') ?>

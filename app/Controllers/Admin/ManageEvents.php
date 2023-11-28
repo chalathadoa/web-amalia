@@ -230,7 +230,7 @@ class ManageEvents extends BaseController
             if ($query->resultID->num_rows > 0) {
                 // $db['event'] = $query->getRow();
                 $data = [
-                    'pageTitle' => 'Create New Event',
+                    'pageTitle' => 'Update Event',
                     'validation' => \Config\Services::validation(),
                     'menu' => 'manage',
                     'submenu' => 'manageevents',

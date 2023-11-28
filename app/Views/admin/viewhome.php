@@ -1,3 +1,8 @@
+<?
+
+/**
+ * @var CodeIgniter\View\View $this
+ */ ?>
 <?= $this->extend('layout/default') ?>
 
 <?= $this->section('title') ?>
@@ -15,23 +20,23 @@
             <div class="col-sm-4 me-1" style="width:auto">
                 <div class="card card-statistic-2 shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div>
-                        <h4>24</h4>
+                        <h4><?= $guru ?></h4>
                     </div>
                     <div>
                         <p>Jumlah Asatidz</p>
                     </div>
-                    <button class="btn" style="background-color:#FFB3C1">Preview</button>
+                    <a href="<?= site_url('manage_users/guru'); ?>" class="btn btn-primary">Preview</a>
                 </div>
             </div>
             <div class="col-sm-4 me-1" style="width:auto">
                 <div class="card card-statistic-2 shadow p-3 mb-5 bg-body-tertiary rounded">
                     <div>
-                        <h4>24</h4>
+                        <h4><?= $santri ?></h4>
                     </div>
                     <div>
-                        <p>Jumlah Asatidz</p>
+                        <p>Jumlah Santriwati</p>
                     </div>
-                    <button class="btn" style="background-color:#FFB3C1">Preview</button>
+                    <a href="<?= site_url('manage_users/santri'); ?>" class="btn btn-primary">Preview</a>
                 </div>
             </div>
             <div class="col-sm-4" style="width:auto">
@@ -40,9 +45,9 @@
                         <h4>24</h4>
                     </div>
                     <div>
-                        <p>Jumlah Asatidz</p>
+                        <p>Santri Terbaik</p>
                     </div>
-                    <button class="btn" style="background-color:#FFB3C1">Preview</button>
+                    <a href="<?= site_url('sterbaik'); ?>" class="btn btn-primary">Preview</a>
                 </div>
             </div>
         </div>
